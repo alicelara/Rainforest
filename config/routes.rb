@@ -1,5 +1,6 @@
 Rainforest::Application.routes.draw do
- resources :products
  root :to => "products#index"
+ resources :products
+ resources :users, :only => [:new, :create]
 
 end
